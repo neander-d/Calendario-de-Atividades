@@ -32,7 +32,7 @@ export default function CalendarPage() {
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
 
   doc.setFontSize(18)
-  doc.text("Calendário 2026 - Unidade Crux", 105, 15, { align: "center" })
+  doc.text("Calendário 2026 - Unidade Sirius", 105, 15, { align: "center" })
 
   let y = 30
   let currentMonth = ""
@@ -66,7 +66,7 @@ export default function CalendarPage() {
     }
   })
 
-  doc.save("calendario-2026.pdf")
+  doc.save("calendario2026-UnidadeSirius.pdf")
 }
 
 
