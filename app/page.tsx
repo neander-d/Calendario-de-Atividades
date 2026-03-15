@@ -46,18 +46,11 @@ export default function CalendarPage() {
 
 
     const months = [
-      "Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho",
+      "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
       "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
     ]
 
-    const categoryLabels: Record<string, string> = {
-      "acampamento": "Acampamento",
-      "reuniao": "Reuniao",
-      "evento-especial": "Evento Especial",
-      "especialidade": "Especialidade",
-      "comunitario": "Comunitario",
-      "aniversario": "Aniversario"
-    }
+   
 
     const formatDate = (dateStr: string) => {
       const date = new Date(dateStr + "T00:00:00")
@@ -151,7 +144,7 @@ export default function CalendarPage() {
       </head>
       <body>
         <div class="header">
-          <h1>Clube de Desbravadores</h1>
+          <h1>Unidade Sirius</h1>
           <p>Calendario de Atividades ${currentYear}</p>
         </div>
         ${Array.from(groupedByMonth.entries())
@@ -161,7 +154,7 @@ export default function CalendarPage() {
               <h2 class="month-title">${months[month]}</h2>
               ${monthEvents.map(event => `
                 <div class="event">
-                  <div class="category">${categoryLabels[event.category]}</div>
+                  <div class="category">${categoryConfig[event.category]?.label}</div>
                   <div class="event-title">${event.title}</div>
                   <div class="event-details">
                     <span><strong>Data:</strong> ${formatDate(event.date)}${event.endDate ? ` - ${formatDate(event.endDate)}` : ""}</span>
