@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Calendário Desbravadores 2026 | Clube de Desbravadores',
-  description: 'Calendário oficial de atividades do Clube de Desbravadores 2026. Acampamentos, reuniões, eventos especiais, especialidades e ações comunitárias.',
+  title: 'Calendário 2026 | Unidade Sirius',
+  description: 'Calendário oficial de atividades da Unidade Sirius 2026.',
   generator: 'v0.app',
   icons: {
     icon: [
